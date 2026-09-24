@@ -1,34 +1,22 @@
-# BBQ Pit OS — 3-Minute Supabase Quickstart
+# BBQ PIT OS — Supabase Setup
+**Ghost Factory™ | 3-Minute Setup**
 
-Welcome to **BBQ Pit Smokehouse OS**. Follow these 3 simple steps to connect your live Supabase database for smoker telemetry, VIP table reservations, and kitchen dispatch:
+## Step 1 — Create Project
+supabase.com → New Project → `bbq-pit-os`
 
----
+## Step 2 — Run Schema
+SQL Editor → paste `supabase/schema.sql` → Run
 
-### Step 1: Create Supabase Project
-1. Log into your dashboard at [Supabase.com](https://supabase.com).
-2. Click **New Project** and name it `bbq-pit-os`.
-3. Choose your nearest region and copy your **Project URL** and **Anon Public Key**.
+## Step 3 — Seed Data
+SQL Editor → paste `supabase/seed.sql` → Run
 
----
-
-### Step 2: Run Database Migrations & Seeds
-1. Open the **SQL Editor** tab in your Supabase dashboard.
-2. Open `supabase/schema.sql` from this folder, paste the entire contents into the SQL Editor, and click **RUN**.
-3. Open `supabase/seed.sql`, paste the contents, and click **RUN** to seed initial smoker pits and reservations.
-
----
-
-### Step 3: Configure Environment Variables
-Create a `.env` file in the root directory:
-
-```bash
-VITE_SUPABASE_URL=https://your-project-id.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-key-here
+## Step 4 — Env Variables
+```env
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
 ```
 
-Restart your Vite development server:
-```bash
-npm run dev
-```
-
-Your BBQ Pit OS is now 100% turnkey and synced with real-time cloud data!
+## Admin Access
+- URL: `https://bbq-pit-os.onrender.com/admin`
+- Passkey: `bbq2026`
+- Button: `[ Auto-Fill 1-Click Passkey (bbq2026) ]`
