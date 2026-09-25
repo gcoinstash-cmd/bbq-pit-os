@@ -290,7 +290,7 @@ const Navbar = ({ onOpenAdmin }: { onOpenAdmin: () => void }) => {
             <a
               key={link.name}
               href={link.href}
-              className="text-[10px] uppercase tracking-[0.3em] font-bold text-cloud-dancer/70 hover:text-patina transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-patina/60 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal rounded-sm py-1"
+              className="text-xs font-semibold tracking-wider uppercase tracking-[0.3em] font-bold text-cloud-dancer/70 hover:text-patina transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-patina/60 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal rounded-sm py-1"
             >
               {link.name}
             </a>
@@ -298,14 +298,14 @@ const Navbar = ({ onOpenAdmin }: { onOpenAdmin: () => void }) => {
           <button
             type="button"
             onClick={onOpenAdmin}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-[10px] uppercase tracking-widest hover:bg-amber-500/20 transition-all"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-base font-semibold min-h-[44px] font-semibold tracking-wider uppercase tracking-widest hover:bg-amber-500/20 transition-all"
           >
             <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
             [ PITMASTER PASS ]
           </button>
           <a
             href="#order"
-            className="px-6 py-2 bg-patina text-charcoal font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-cloud-dancer hover:text-charcoal transition-all duration-500 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-patina/60 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal"
+            className="px-6 py-2 bg-patina text-charcoal font-bold text-xs font-semibold tracking-wider uppercase tracking-[0.2em] hover:bg-cloud-dancer hover:text-charcoal transition-all duration-500 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-patina/60 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal"
           >
             Book a Table
           </a>
@@ -365,7 +365,7 @@ const SectionHeader = ({ title, subtitle, centered = false }: { title: string; s
     viewport={{ once: true }}
     className={`mb-16 select-none ${centered ? 'text-center mx-auto' : 'text-left'} max-w-4xl`}
   >
-    <p className="text-patina text-[10px] uppercase tracking-[0.4em] font-bold mb-6 break-words">{subtitle}</p>
+    <p className="text-patina text-xs font-semibold tracking-wider uppercase tracking-[0.4em] font-bold mb-6 break-words">{subtitle}</p>
     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif text-cloud-dancer font-light uppercase leading-tight tracking-[0.05em] md:tracking-[0.1em] break-words">{title}</h2>
     <div className={`h-px w-24 bg-cloud-dancer/10 mt-8 ${centered ? 'mx-auto' : ''}`}></div>
   </motion.div>
@@ -405,7 +405,7 @@ const FloatingInput = ({
       <label 
         htmlFor={id}
         className={`absolute left-0 transition-all duration-300 uppercase tracking-[0.3em] font-bold pointer-events-none z-10
-          ${shouldFloat ? '-top-1 text-[9px] text-patina' : 'top-7 text-[10px] text-cloud-dancer/60'}
+          ${shouldFloat ? '-top-1 text-[9px] text-patina' : 'top-7 text-xs font-semibold tracking-wider text-cloud-dancer/60'}
         `}
       >
         {label} {required && <span className="text-burnt-orange select-none font-bold" aria-hidden="true">*</span>}
@@ -441,7 +441,7 @@ const FloatingInput = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.25 }}
-            className="text-[10px] text-burnt-orange font-semibold uppercase tracking-[0.15em] mt-2 block select-none"
+            className="text-xs font-semibold tracking-wider text-burnt-orange font-semibold uppercase tracking-[0.15em] mt-2 block select-none"
           >
             {error}
           </motion.p>
@@ -479,7 +479,7 @@ const FloatingSelect = ({
       <label 
         htmlFor={id}
         className={`absolute left-0 transition-all duration-300 uppercase tracking-[0.3em] font-bold pointer-events-none z-10
-          ${shouldFloat ? '-top-1 text-[9px] text-patina' : 'top-7 text-[10px] text-cloud-dancer/60'}
+          ${shouldFloat ? '-top-1 text-[9px] text-patina' : 'top-7 text-xs font-semibold tracking-wider text-cloud-dancer/60'}
         `}
       >
         {label} {required && <span className="text-burnt-orange select-none font-bold" aria-hidden="true">*</span>}
@@ -525,7 +525,7 @@ const FloatingSelect = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.25 }}
-            className="text-[10px] text-burnt-orange font-semibold uppercase tracking-[0.15em] mt-2 block select-none"
+            className="text-xs font-semibold tracking-wider text-burnt-orange font-semibold uppercase tracking-[0.15em] mt-2 block select-none"
           >
             {error}
           </motion.p>
@@ -577,7 +577,7 @@ const MenuCard: React.FC<{ item: any; onProvenanceClick?: () => void }> = ({ ite
               </div>
             )}
             
-            <div className="absolute top-4 right-4 glass px-3 py-1 text-[10px] font-bold text-patina tracking-widest uppercase">
+            <div className="absolute top-4 right-4 glass px-3 py-1 text-xs font-semibold tracking-wider font-bold text-patina tracking-widest uppercase">
               {item.price}
             </div>
             
@@ -936,7 +936,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-patina text-[10px] uppercase tracking-[0.6em] font-bold mb-8 break-words">{TEMPLATE_CONFIG.brand.established}</p>
+            <p className="text-patina text-xs font-semibold tracking-wider uppercase tracking-[0.6em] font-bold mb-8 break-words">{TEMPLATE_CONFIG.brand.established}</p>
             <h1 className="text-5xl sm:text-7xl md:text-9xl font-serif text-cloud-dancer font-light leading-[0.95] text-balance mb-12 tracking-tighter break-words">
               {TEMPLATE_CONFIG.brand.taglinePre} <br />
               <span className="italic text-patina/80">{TEMPLATE_CONFIG.brand.taglineBold}</span>.
@@ -955,14 +955,14 @@ export default function App() {
             <a 
               href="#menu" 
               onClick={() => addToast("Our smokehouse menu is ready.", "SECURED", 3000)}
-              className="w-full sm:w-auto px-12 py-6 bg-patina text-charcoal font-bold text-[10px] uppercase tracking-[0.3em] hover:bg-cloud-dancer transition-all duration-500 rounded-sm text-center"
+              className="w-full sm:w-auto px-12 py-6 bg-patina text-charcoal font-bold text-xs font-semibold tracking-wider uppercase tracking-[0.3em] hover:bg-cloud-dancer transition-all duration-500 rounded-sm text-center"
             >
               {TEMPLATE_CONFIG.brand.ctaDiscover}
             </a>
             <a 
               href="#order" 
               onClick={() => addToast("Opening reservations.", "UPDATED", 3000)}
-              className="w-full sm:w-auto px-12 py-6 border border-cloud-dancer/10 text-cloud-dancer font-bold text-[10px] uppercase tracking-[0.3em] hover:bg-burnt-orange hover:border-burnt-orange transition-all duration-500 rounded-sm text-center"
+              className="w-full sm:w-auto px-12 py-6 border border-cloud-dancer/10 text-cloud-dancer font-bold text-xs font-semibold tracking-wider uppercase tracking-[0.3em] hover:bg-burnt-orange hover:border-burnt-orange transition-all duration-500 rounded-sm text-center"
             >
               {TEMPLATE_CONFIG.brand.ctaReserve}
             </a>
@@ -979,7 +979,7 @@ export default function App() {
             addToast("Now viewing today's fresh cuts.", "UPDATED", 3000);
           }}
         >
-          <span className="text-[10px] uppercase tracking-[0.5em] text-cloud-dancer/20 font-bold">Scroll</span>
+          <span className="text-xs font-semibold tracking-wider uppercase tracking-[0.5em] text-cloud-dancer/20 font-bold">Scroll</span>
           <div className="w-px h-16 bg-gradient-to-b from-patina/40 to-transparent"></div>
         </motion.div>
       </section>
@@ -1055,7 +1055,7 @@ export default function App() {
           </div>
 
           <div className="mt-20 text-center">
-            <p className="text-cloud-dancer/30 text-[10px] uppercase tracking-widest italic mb-12">* All meats are prime grade and hormone-free. Sliced to order.</p>
+            <p className="text-cloud-dancer/30 text-xs font-semibold tracking-wider uppercase tracking-widest italic mb-12">* All meats are prime grade and hormone-free. Sliced to order.</p>
             <a 
               href="#order" 
               onClick={() => addToast("Opening reservations.", "UPDATED", 3000)}
@@ -1130,7 +1130,7 @@ export default function App() {
                 return (
                   <div className="space-y-4" key={idx}>
                     {aboutIcons[idx] || <Flame className="w-6 h-6 text-patina opacity-40 mb-3" />}
-                    <h4 className="text-cloud-dancer text-[10px] uppercase tracking-[0.3em] font-bold break-words">{feature.title}</h4>
+                    <h4 className="text-cloud-dancer text-xs font-semibold tracking-wider uppercase tracking-[0.3em] font-bold break-words">{feature.title}</h4>
                     <p className="text-[9px] text-cloud-dancer/30 leading-relaxed uppercase tracking-widest font-bold break-words">{feature.desc}</p>
                   </div>
                 );
@@ -1198,13 +1198,13 @@ export default function App() {
             <div className="pt-8 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 justify-start">
               <a 
                 href={`mailto:${TEMPLATE_CONFIG.contact.email}?subject=Private Dining Inquiry`}
-                className="w-full sm:w-auto px-8 py-4 bg-transparent border border-patina text-patina hover:bg-patina hover:text-charcoal font-bold text-[10px] uppercase tracking-[0.25em] transition-all duration-500 rounded-none cursor-pointer text-center min-w-[220px] active:scale-95 block mb-4 sm:mb-0 sm:mr-4"
+                className="w-full sm:w-auto px-8 py-4 bg-transparent border border-patina text-patina hover:bg-patina hover:text-charcoal font-bold text-xs font-semibold tracking-wider uppercase tracking-[0.25em] transition-all duration-500 rounded-none cursor-pointer text-center min-w-[220px] active:scale-95 block mb-4 sm:mb-0 sm:mr-4"
               >
                 Inquire About Private Dining
               </a>
               <a 
                 href={`mailto:${TEMPLATE_CONFIG.contact.email}?subject=Catering Inquiry`}
-                className="w-full sm:w-auto px-8 py-4 bg-transparent border border-cloud-dancer/20 text-cloud-dancer/80 hover:border-patina hover:text-patina font-bold text-[10px] uppercase tracking-[0.25em] transition-all duration-500 rounded-none cursor-pointer text-center min-w-[220px] active:scale-95 block mt-2 sm:mt-0"
+                className="w-full sm:w-auto px-8 py-4 bg-transparent border border-cloud-dancer/20 text-cloud-dancer/80 hover:border-patina hover:text-patina font-bold text-xs font-semibold tracking-wider uppercase tracking-[0.25em] transition-all duration-500 rounded-none cursor-pointer text-center min-w-[220px] active:scale-95 block mt-2 sm:mt-0"
               >
                 Request Catering Details
               </a>
@@ -1232,7 +1232,7 @@ export default function App() {
                     <MapPin className="w-5 h-5 text-patina" />
                   </div>
                   <div>
-                    <h4 className="text-cloud-dancer text-[10px] uppercase tracking-[0.3em] font-bold mb-3">Location</h4>
+                    <h4 className="text-cloud-dancer text-xs font-semibold tracking-wider uppercase tracking-[0.3em] font-bold mb-3">Location</h4>
                     <p className="text-cloud-dancer/70 font-light leading-relaxed text-lg break-words">
                       {TEMPLATE_CONFIG.contact.addressLines.map((line, idx) => (
                         <React.Fragment key={idx}>{line}{idx < TEMPLATE_CONFIG.contact.addressLines.length - 1 && <br />}</React.Fragment>
@@ -1246,7 +1246,7 @@ export default function App() {
                     <Clock className="w-5 h-5 text-patina" />
                   </div>
                   <div>
-                    <h4 className="text-cloud-dancer text-[10px] uppercase tracking-[0.3em] font-bold mb-3">Hours</h4>
+                    <h4 className="text-cloud-dancer text-xs font-semibold tracking-wider uppercase tracking-[0.3em] font-bold mb-3">Hours</h4>
                     <p className="text-cloud-dancer/70 font-light leading-relaxed text-lg break-words">
                       {TEMPLATE_CONFIG.contact.hoursLines.map((line, idx) => (
                         <React.Fragment key={idx}>{line}{idx < TEMPLATE_CONFIG.contact.hoursLines.length - 1 && <br />}</React.Fragment>
@@ -1260,7 +1260,7 @@ export default function App() {
                     <Phone className="w-5 h-5 text-patina" />
                   </div>
                   <div>
-                    <h4 className="text-cloud-dancer text-[10px] uppercase tracking-[0.3em] font-bold mb-3">Contact</h4>
+                    <h4 className="text-cloud-dancer text-xs font-semibold tracking-wider uppercase tracking-[0.3em] font-bold mb-3">Contact</h4>
                     <p className="text-cloud-dancer/70 font-light leading-relaxed text-lg break-words">
                       {TEMPLATE_CONFIG.contact.phone} <br />
                       {TEMPLATE_CONFIG.contact.email}
@@ -1337,7 +1337,7 @@ export default function App() {
                     <div className="space-y-2 max-w-md">
                       <div className="flex items-center gap-3">
                         <Flame className="w-4 h-4 text-patina" />
-                        <span className="text-[10px] text-patina uppercase tracking-[0.3em] font-bold">Exclusive Services</span>
+                        <span className="text-xs font-semibold tracking-wider text-patina uppercase tracking-[0.3em] font-bold">Exclusive Services</span>
                       </div>
                       <h4 className="text-cloud-dancer font-serif text-xl tracking-wide uppercase font-light">Private Dining & Catering Inquiries</h4>
                       <p className="text-cloud-dancer/40 text-xs font-sans leading-relaxed">
@@ -1346,7 +1346,7 @@ export default function App() {
                     </div>
                     <a 
                       href={`mailto:${TEMPLATE_CONFIG.contact.email}?subject=Private Dining or Catering Inquiry`}
-                      className="px-8 py-5 bg-cloud-dancer text-charcoal hover:bg-patina hover:text-white text-[10px] uppercase font-black tracking-[0.4em] transition-all duration-500 rounded-sm hover:-translate-y-1 active:translate-y-0 text-center shadow-lg hover:shadow-patina/20"
+                      className="px-8 py-5 bg-cloud-dancer text-charcoal hover:bg-patina hover:text-white text-xs font-semibold tracking-wider uppercase font-black tracking-[0.4em] transition-all duration-500 rounded-sm hover:-translate-y-1 active:translate-y-0 text-center shadow-lg hover:shadow-patina/20"
                     >
                       Inquire Now
                     </a>

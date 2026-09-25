@@ -78,7 +78,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
             <div>
               <div className="flex items-center gap-2">
                 <h3 className="font-serif text-lg tracking-wide font-bold text-amber-100">BBQ PIT — PITMASTER COMMAND OS</h3>
-                <span className="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                <span className="text-xs font-semibold tracking-wider uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
                   Live Dispatch
                 </span>
               </div>
@@ -121,14 +121,14 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
               <div className="flex flex-col gap-2">
                 <button
                   type="submit"
-                  className="w-full py-3 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white font-bold rounded-xl shadow-lg shadow-amber-900/30 transition-all text-xs tracking-widest uppercase"
+                  className="w-full py-3 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white font-bold rounded-xl shadow-lg shadow-amber-900/30 transition-all text-base font-semibold min-h-[44px] tracking-widest uppercase"
                 >
                   Verify Access
                 </button>
                 <button
                   type="button"
                   onClick={handleOneClickFill}
-                  className="w-full py-2.5 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 font-bold rounded-xl transition-all text-xs tracking-wider flex items-center justify-center gap-2"
+                  className="w-full py-2.5 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 font-bold rounded-xl transition-all text-base font-semibold min-h-[44px] tracking-wider flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-4 h-4 text-amber-400" />
                   Auto-Fill 1-Click Passkey (bbq2026)
@@ -165,7 +165,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                 })}
               </div>
               <div className="flex items-center gap-4">
-                <span className="text-[11px] text-stone-400 font-mono flex items-center gap-1.5">
+                <span className="text-xs font-semibold text-stone-400 font-mono flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   PITS RUNNING: 3/3
                 </span>
@@ -184,24 +184,24 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
               {/* Stat Strip */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="p-4 bg-stone-900/50 border border-stone-800 rounded-xl">
-                  <span className="text-[10px] text-stone-400 uppercase tracking-widest block mb-1">Wood Inventory</span>
+                  <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-widest block mb-1">Wood Inventory</span>
                   <span className="text-xl font-bold font-mono text-stone-100">8.4 Cords</span>
-                  <span className="text-[10px] text-amber-400/80 block mt-1">Post Oak & Pecan</span>
+                  <span className="text-xs font-semibold tracking-wider text-amber-400/80 block mt-1">Post Oak & Pecan</span>
                 </div>
                 <div className="p-4 bg-stone-900/50 border border-stone-800 rounded-xl">
-                  <span className="text-[10px] text-stone-400 uppercase tracking-widest block mb-1">Prime Brisket Smoked</span>
+                  <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-widest block mb-1">Prime Brisket Smoked</span>
                   <span className="text-xl font-bold font-mono text-stone-100">420 lbs</span>
-                  <span className="text-[10px] text-emerald-400 block mt-1">Today's Batch</span>
+                  <span className="text-xs font-semibold tracking-wider text-emerald-400 block mt-1">Today's Batch</span>
                 </div>
                 <div className="p-4 bg-stone-900/50 border border-stone-800 rounded-xl">
-                  <span className="text-[10px] text-stone-400 uppercase tracking-widest block mb-1">Evening Covers</span>
+                  <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-widest block mb-1">Evening Covers</span>
                   <span className="text-xl font-bold font-mono text-stone-100">142 Guests</span>
-                  <span className="text-[10px] text-amber-400 block mt-1">94% Capacity</span>
+                  <span className="text-xs font-semibold tracking-wider text-amber-400 block mt-1">94% Capacity</span>
                 </div>
                 <div className="p-4 bg-stone-900/50 border border-stone-800 rounded-xl">
-                  <span className="text-[10px] text-stone-400 uppercase tracking-widest block mb-1">Today's Gross Sales</span>
+                  <span className="text-xs font-semibold tracking-wider text-stone-400 uppercase tracking-widest block mb-1">Today's Gross Sales</span>
                   <span className="text-xl font-bold font-mono text-stone-100">$8,450.00</span>
-                  <span className="text-[10px] text-emerald-400 block mt-1">+18% vs Last Friday</span>
+                  <span className="text-xs font-semibold tracking-wider text-emerald-400 block mt-1">+18% vs Last Friday</span>
                 </div>
               </div>
 
@@ -221,7 +221,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                       <div key={pit.id} className="p-4 bg-stone-900/70 border border-stone-800/90 rounded-xl space-y-3">
                         <div className="flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-amber-400">{pit.id}</span>
-                          <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                          <span className="text-xs font-semibold tracking-wider font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                             {pit.status}
                           </span>
                         </div>
@@ -231,11 +231,11 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                         </div>
                         <div className="pt-2 border-t border-stone-800 flex items-center justify-between">
                           <div>
-                            <span className="text-[10px] text-stone-500 block">Chamber Temp</span>
+                            <span className="text-xs font-semibold tracking-wider text-stone-500 block">Chamber Temp</span>
                             <span className="text-lg font-mono font-bold text-amber-300">{pit.temp}</span>
                           </div>
                           <div className="text-right">
-                            <span className="text-[10px] text-stone-500 block">Fuel Source</span>
+                            <span className="text-xs font-semibold tracking-wider text-stone-500 block">Fuel Source</span>
                             <span className="text-xs font-mono text-stone-300">{pit.wood}</span>
                           </div>
                         </div>
@@ -254,7 +254,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                   </h4>
                   <div className="border border-stone-800 rounded-xl overflow-hidden">
                     <table className="w-full text-left text-xs text-stone-300">
-                      <thead className="bg-stone-900/80 text-[10px] uppercase font-bold text-stone-400 tracking-wider">
+                      <thead className="bg-stone-900/80 text-xs font-semibold tracking-wider uppercase font-bold text-stone-400 tracking-wider">
                         <tr>
                           <th className="py-3 px-4">Ref</th>
                           <th className="py-3 px-4">Guest</th>
@@ -273,7 +273,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                             <td className="py-3 px-4 text-stone-400">{res.party} guests • {res.table}</td>
                             <td className="py-3 px-4 text-emerald-400">{res.deposit}</td>
                             <td className="py-3 px-4">
-                              <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px]">
+                              <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold tracking-wider">
                                 {res.status}
                               </span>
                             </td>
@@ -300,13 +300,13 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
                             {ord.id}
                           </div>
                           <div>
-                            <div className="text-xs font-bold text-stone-200">{ord.customer} <span className="text-[10px] text-stone-500 font-mono">({ord.time})</span></div>
+                            <div className="text-xs font-bold text-stone-200">{ord.customer} <span className="text-xs font-semibold tracking-wider text-stone-500 font-mono">({ord.time})</span></div>
                             <div className="text-xs text-stone-400">{ord.items}</div>
                           </div>
                         </div>
                         <div className="flex items-center gap-4">
                           <span className="font-mono text-xs font-bold text-stone-100">{ord.total}</span>
-                          <span className="text-[10px] font-bold px-2 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                          <span className="text-xs font-semibold tracking-wider font-bold px-2 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">
                             {ord.state}
                           </span>
                         </div>
@@ -322,7 +322,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({ isOpen, onCl
               <span className="font-mono">Turnkey Supabase Schema Ready • RLS Active</span>
               <button
                 onClick={onClose}
-                className="px-4 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 font-bold rounded-lg transition-colors text-xs"
+                className="px-4 py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-200 font-bold rounded-lg transition-colors text-base font-semibold min-h-[44px]"
               >
                 Close Terminal
               </button>
